@@ -1,0 +1,8 @@
+aiofile==3.7.2
+py-cord[voice]==1.7.3
+googletrans==4.0.0-rc1
+gtts==2.2.3
+markovify==0.9.3
+msgpack==1.0.2
+nltk==3.6.5
+Pillow==8.4.0
