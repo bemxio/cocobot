@@ -194,7 +194,7 @@ class Impersonation(commands.Cog):
             self.koronbot = utils.get(ctx.guild.members, id=804301771438555156)
         
         person = victim or ctx.author      
-        auth = self.webhooks.get("935547777302282250") # webhook for #general
+        auth = self.webhooks.get("935543814335107152") # webhook for #general
         
         session = aiohttp.ClientSession()
         webhook = Webhook.partial(
