@@ -19,7 +19,7 @@ class MessageCounting(commands.Cog):
         if not self.messages:
             self.fetch.start()
         
-    @tasks.loop(hours=1)
+    @tasks.loop(days=1)
     async def fetch(self):
         await self.bot.wait_until_ready()
         
