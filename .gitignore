@@ -156,6 +156,7 @@ cython_debug/
 
 # cocobot stuff
 credentials.py
+assets/config.py
 assets/memory.msgpack
 assets/webhooks.json
 assets/backup_memories/
