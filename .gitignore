@@ -160,3 +160,4 @@ assets/config.py
 assets/memory.msgpack
 assets/webhooks.json
 assets/backup_memories/
+assets/count_msg.json

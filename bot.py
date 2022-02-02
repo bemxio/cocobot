@@ -44,5 +44,6 @@ bot.load_extension("extensions.chatter")
 bot.load_extension("extensions.debug")
 bot.load_extension("extensions.fun")
 bot.load_extension("extensions.help")
+bot.load_extension("extensions.count")
 
 bot.run(credentials.discord_token)
