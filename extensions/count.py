@@ -9,32 +9,23 @@ class MessageCounting(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.messages = []
-        
-        if not os.path.exists("assets/count_msg.json"):
-            self.fetch.start()
-        
-        with open("assets/count_msg.json", "r") as file:
-            self.messages = json.load(file)
-        
-        if not self.messages:
-            self.fetch.start()
+        self.fetch.start()
         
     @tasks.loop(hours=24)
     async def fetch(self):
         await self.bot.wait_until_ready()
+        messages = []
         
         for channel_id in cf.count_channels:
             channel = self.bot.get_channel(channel_id)
 
             async for message in channel.history(limit=None):
-                self.messages.append({"author": message.author.id, "content": message.content})
+                messages.append({"author": message.author.id, "content": message.content})
         
-        with open("assets/count_msg.json", "w") as file:
-            json.dump(self.messages, file, indent=4)
-
-        self.fetch.stop()
+        self.messages = messages
     
     @commands.command()
+    @commands.cooldown(1, 60, commands.BucketType.user)
     async def count(self, ctx, *, text):
         messages = {}
 
