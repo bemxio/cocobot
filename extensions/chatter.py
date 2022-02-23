@@ -4,7 +4,7 @@
 from discord import Webhook, AsyncWebhookAdapter
 from discord.ext import commands, tasks
 from discord import User, Embed, Colour
-from discord import utils
+from discord import utils, AllowedMentions
 
 from assets.modules import markov, meme, voice
 import assets.config as cf
@@ -166,7 +166,12 @@ class Impersonation(commands.Cog):
         """
         
         await ctx.message.delete()
-        await webhook.send(message, avatar_url = member.avatar_url, username = member.name)
+        await webhook.send(
+            message, 
+            avatar_url = member.avatar_url, 
+            username = member.name,
+            allowed_mentions = AllowedMentions.none()
+        )
         await session.close()
     
     """
