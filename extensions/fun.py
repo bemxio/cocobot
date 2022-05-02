@@ -35,6 +35,9 @@ class Reactions(commands.Cog):
 
     @commands.command()
     async def hug(self, ctx, member: User = None):
+        if ctx.guild.id in cf.erp_channels:
+            return await ctx.send(cf.reaction_command_fail)
+        
         hugger = ctx.author
         member = member or hugger
 
@@ -50,6 +53,9 @@ class Reactions(commands.Cog):
     
     @commands.command()
     async def kiss(self, ctx, member: User = None):
+        if ctx.guild.id in cf.erp_channels:
+            return await ctx.send(cf.reaction_command_fail)
+        
         kisser = ctx.author
         member = member or kisser
 

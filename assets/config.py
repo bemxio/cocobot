@@ -29,9 +29,9 @@ commands_and_chat = [
 ]
 
 impregnate = """
-You got lucky, darling~
-Come here as I fill you up with my futa cock~!
-||no link here, you gotta do the `pd impregnate` on the original cocobot to see it||
+you indeed got lucky darling but sadly i ran out of cum so i will not be able to impregnate you
+dm someone that got the lucky pic of me and they might be able to show it to you
+unless you are a minor lol
 """
 sex = "okay i understand that you might find me attractive {} but i literally am a piece of Python code hosted on a DigitalOcean hosting service"
 grooming = """
@@ -40,6 +40,9 @@ probably either you or {1} is underage
 i know you would really want to cum on {1}, but please, think about it.
 it's better to build a relationship first, at least in my opinion ¯\\\_(ツ)_/¯
 """
+
+erp_channels = (857816615273889813, 857816882899583006) # chill-chat and unholo
+reaction_command_fail = "s-sowwy UwU there was too much erp here & thats no good!!!!!!!!!!! so i cant let you do that :3333"
 
 selfhug = "aww, you want a hug? come here!\n"
 hug = "come here {}! you got hugged by {}! :D\n"
