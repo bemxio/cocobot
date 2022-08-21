@@ -188,7 +188,6 @@ class Impersonation(commands.Cog):
                     await reply.delete()
                     #await ctx.message.delete()
                     await ctx.message.add_reaction(cf.approb)
-    """
     
     @commands.command(aliases=["leave"])
     async def fakekick(self, ctx, victim: User = None):
@@ -241,7 +240,8 @@ class Impersonation(commands.Cog):
     @commands.Cog.listener("on_command_error")
     async def webhook_issues(self, ctx, err):
         pass
-
+    """
+    
 class Meme(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
