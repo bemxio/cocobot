@@ -126,9 +126,8 @@ class Impersonation(commands.Cog):
     async def impersonate(self, ctx, member: User = None, *, message = None):
         if ctx.guild.id == 803282468798201927:
             if not self.offender:
-                self.offender = utils.get(ctx.guild.roles, id=841163823435874384)
-        
-        if ctx.guild.id == 803282468798201927:
+                self.offender = utils.get(ctx.guild.roles, id=1086894336437919835)
+            
             if self.offender in ctx.author.roles:
                 if message:
                     return await ctx.send(f"no embed perms exploit for you {ctx.author.name}!")
