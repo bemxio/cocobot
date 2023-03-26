@@ -4,5 +4,5 @@ googletrans==4.0.0-rc1
 gtts==2.2.3
 markovify==0.9.3
 msgpack==1.0.2
-nltk==3.6.5
+nltk==3.6.6
 Pillow==8.4.0
