@@ -124,13 +124,12 @@ class Impersonation(commands.Cog):
 
     @commands.command()
     async def impersonate(self, ctx, member: User = None, *, message = None):
-        if ctx.guild.id == 803282468798201927:
-            if not self.offender:
-                self.offender = utils.get(ctx.guild.roles, id=1086894336437919835)
+        if not self.offender:
+            self.offender = utils.get(ctx.guild.roles, id=1086894336437919835)
             
-            if self.offender in ctx.author.roles:
-                if message:
-                    return await ctx.send(f"no embed perms exploit for you {ctx.author.name}!")
+        if self.offender in ctx.author.roles:
+            if message:
+                return await ctx.send(f"no embed perms exploit for you {ctx.author.name}!")
 
         auth = self.webhooks.get(str(ctx.channel.id)) # webhook authencation stuff
         message = message or await chain.generate()
